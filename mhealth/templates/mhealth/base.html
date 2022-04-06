@@ -1,0 +1,157 @@
+{% load sass_tags %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {% if title %}
+    <title>M-Health - {{title}}</title>
+    {% else %}
+    <title>M-Health</title>
+    {% endif %}
+
+    <!-- Line Awesome Link -->
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{% sass_src 'mhealth/bootstrap/bootstrap.scss' %}"
+    />
+
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="{% sass_src 'mhealth/bootstrap/style.scss' %}"
+    />
+  </head>
+  <body id="home" data-bs-spy="scroll" data-bs-target="#main-nav">
+    <!-- START HERE -->
+    <!-- NAVBAR -->
+    <nav
+      id="main-nav"
+      class="navbar navbar-expand-md navbar-light fixed-top py-4"
+    >
+      <div class="container">
+        <a href="#home" class="navbar-brand">
+          <img
+            src="{% static 'mhealth/img/mlogo.png' %}"
+            width="50"
+            height="50"
+            alt=""
+          />
+          <h3 class="d-inline align-middle">M-Health</h3>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <!--ml-auto changed to ms-auto  -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="{% url 'mhealth-home' %}" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'mhealth-home' %}#about" class="nav-link"
+                >About</a
+              >
+            </li>
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                >Services</a
+              >
+              <div class="dropdown-menu">
+                <a href="{% url 'mhealth-appointment'%}" class="dropdown-item"
+                  >Doctor On the Go</a
+                >
+                <a href="{% url 'mhealth-pharmacy' %}" class="dropdown-item"
+                  >Pharmacy</a
+                >
+                <a href="{% url 'mhealth-testkit' %}" class="dropdown-item"
+                  >COVID-19 Test Kit</a
+                >
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a href="{% url 'mhealth-home' %}#doctors" class="nav-link"
+                >Our Doctors</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'mhealth-home' %}#blog" class="nav-link">News</a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'mhealth-contact' %}#contact" class="nav-link"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+    <!-- FOOTER -->
+    <footer id="main-footer" class="py-5 bg-primary text-white">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-md-6 ml-auto">
+            <p class="lead">All rights Reserved &copy; M-Health, 2022</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Javascript scrip tag -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Init Scrollspy
+      $("body").scrollspy({ target: "#main-nav" });
+
+      // Smooth Scrolling
+      $("#main-nav a").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+
+          const hash = this.hash;
+
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800,
+            function () {
+              window.location.hash = hash;
+            }
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

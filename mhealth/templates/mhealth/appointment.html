@@ -1,0 +1,45 @@
+{% extends "mhealth/base.html" %} {% block content %} {% load static %}
+
+<!-- booking section starts   -->
+
+<section class="book" id="book">
+  {% if your_name %}
+  <center>
+    <h2>Thanks {{ your_name }}!</h2>
+    <p>We receive your email and will call you as soon as possible.</p>
+  </center>
+  <br />
+  <br />
+  <br />
+  {% else %}
+
+  <h1 class="heading"><span>book</span> now</h1>
+
+  <div class="row">
+    <div class="image">
+      <img src="{% static 'mhealth/img/book-img.svg' %}" alt="" />
+    </div>
+
+    <form action="{% url 'mhealth-appointment'%}" method="post">
+      {% csrf_token %}
+      <h3>book appointment</h3>
+      <input name="your-name" type="text" placeholder="Your name" class="box" />
+      <input
+        name="your-number"
+        type="number"
+        placeholder="Your number"
+        class="box"
+      />
+      <input
+        name="your-email"
+        type="email"
+        placeholder="Your email"
+        class="box"
+      />
+      <input name="your-date" type="date" class="box" />
+      <input type="submit" value="book now" class="btn" />
+    </form>
+  </div>
+</section>
+
+{% endif %} {% endblock content %}

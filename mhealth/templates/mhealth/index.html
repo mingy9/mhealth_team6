@@ -1,0 +1,474 @@
+{% extends "mhealth/base.html" %} {% block content %} {% load static %}
+<!-- SHOWCASE -->
+<section id="showcase" class="py-5">
+  <div class="primary-overlay text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-center">
+          <h1 class="display-2 mt-5 pt-5">Let's Connect</h1>
+          <p class="lead">
+            You can get the care you need 24/7 - be it online or in person. You
+            will be treated by caring specialist doctors.
+          </p>
+          <a
+            href="{% url 'mhealth-appointment'%}"
+            class="btn btn-outline-secondary btn-lg text-white"
+            ><i class="las la-arrow-right"></i>Make an Appointment</a
+          >
+        </div>
+        <!-- Place SignUp Form Here-->
+
+        <!-- end sign up -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section id="newsletter" class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <input
+          type="text"
+          class="form-control form-control-lg mb-resp"
+          placeholder="Enter Name"
+        />
+      </div>
+      <div class="col-md-4">
+        <input
+          type="email"
+          class="form-control form-control-lg mb-resp"
+          placeholder="Enter Email"
+        />
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-primary btn-lg btn-block">
+          <i class="fas fa-envelope-open-o"></i>Subscribe To Newsletter
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOXES -->
+<section id="boxes" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card text-center border-primary mb-resp">
+          <div class="card-body">
+            <h3 class="text-primary">COVID-19 Testing</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+              deserunt.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primary text-white mb-resp">
+          <div class="card-body">
+            <h3>Online Pharmacy</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+              deserunt.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center border-primary mb-resp">
+          <div class="card-body">
+            <h3 class="text-primary">Health Screening</h3>
+            <p class="text-muted">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+              deserunt.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card text-center bg-primary text-white">
+          <div class="card-body">
+            <h3>Consult Specialist</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet,
+              deserunt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT / WHY SECTION -->
+<section id="about" class="py-5 text-center bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-primary pb-3">ABOUT US</h1>
+          <p class="lead pb-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            obcaecati alias rerum dolore fugiat debitis?
+          </p>
+        </div>
+
+        <!-- ACCORDION -->
+        <div id="accordion">
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div
+                  href="#collapse1"
+                  data-bs-toggle="collapse"
+                  data-bs-parent="#accordion"
+                >
+                  <i class="las la-arrow-circle-down"></i> Ensuring a better
+                  healthcare service for you
+                </div>
+              </h5>
+            </div>
+
+            <div id="collapse1" class="collapse show">
+              <div class="card-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Impedit odit laborum qui, debitis, sequi dolores nobis mollitia
+                labore quasi earum laboriosam nihil cupiditate magnam iusto
+                nostrum doloremque accusantium repudiandae expedita autem et,
+                repellendus suscipit consequatur! Alias, maiores amet sunt ab
+                inventore illo, deleniti facilis consequatur tenetur nam
+                pariatur fuga nisi!
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div
+                  href="#collapse2"
+                  data-bs-toggle="collapse"
+                  data-bs-parent="#accordion"
+                >
+                  <i class="las la-arrow-circle-down"></i> Health Content on
+                  M-Health
+                </div>
+              </h5>
+            </div>
+
+            <div id="collapse2" class="collapse">
+              <div class="card-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Impedit odit laborum qui, debitis, sequi dolores nobis mollitia
+                labore quasi earum laboriosam nihil cupiditate magnam iusto
+                nostrum doloremque accusantium repudiandae expedita autem et,
+                repellendus suscipit consequatur! Alias, maiores amet sunt ab
+                inventore illo, deleniti facilis consequatur tenetur nam
+                pariatur fuga nisi!
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <h5 class="mb-0">
+                <div
+                  href="#collapse3"
+                  data-bs-toggle="collapse"
+                  data-bs-parent="#accordion"
+                >
+                  <i class="las la-arrow-circle-down"></i> FAQ
+                </div>
+              </h5>
+            </div>
+
+            <div id="collapse3" class="collapse">
+              <div class="card-body">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Impedit odit laborum qui, debitis, sequi dolores nobis mollitia
+                labore quasi earum laboriosam nihil cupiditate magnam iusto
+                nostrum doloremque accusantium repudiandae expedita autem et,
+                repellendus suscipit consequatur! Alias, maiores amet sunt ab
+                inventore illo, deleniti facilis consequatur tenetur nam
+                pariatur fuga nisi!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Doctors -->
+<section id="doctors" class="my-5 text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-primary pb-3">Meet Our Doctors</h1>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
+            laborum numquam aperiam dolores a porro!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="{% static 'mhealth/img/person1.jpg' %}"
+              alt=""
+              class="img-fluid rounded-circle w-50 mb-3"
+            />
+            <h3>Dr. Susan Tan</h3>
+            <h5 class="text-muted">Dermatologists</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+              commodi nostrum, ab libero voluptas officia.
+            </p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4">
+                <a href="http://facebook.com">
+                  <i class="lab la-facebook"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://twitter.com">
+                  <i class="lab la-twitter"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://linkedin.com">
+                  <i class="lab la-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="{% static 'mhealth/img/person2.jpg' %}"
+              alt=""
+              class="img-fluid rounded-circle w-50 mb-3"
+            />
+            <h3>Dr. Natasha</h3>
+            <h5 class="text-muted">Ophthalmologists</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+              commodi nostrum, ab libero voluptas officia.
+            </p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4">
+                <a href="http://facebook.com">
+                  <i class="lab la-facebook"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://twitter.com">
+                  <i class="lab la-twitter"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://linkedin.com">
+                  <i class="lab la-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="{% static 'mhealth/img/person3.jpg' %}"
+              alt=""
+              class="img-fluid rounded-circle w-50 mb-3"
+            />
+            <h3>Dr. Firdaus</h3>
+            <h5 class="text-muted">Cardiologists</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+              commodi nostrum, ab libero voluptas officia.
+            </p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4">
+                <a href="http://facebook.com">
+                  <i class="lab la-facebook"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://twitter.com">
+                  <i class="lab la-twitter"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://linkedin.com">
+                  <i class="lab la-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <img
+              src="{% static 'mhealth/img/person4.jpg' %}"
+              alt=""
+              class="img-fluid rounded-circle w-50 mb-3"
+            />
+            <h3>Dr. Kelvin</h3>
+            <h5 class="text-muted">Endocrinologists</h5>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
+              commodi nostrum, ab libero voluptas officia.
+            </p>
+            <div class="d-flex justify-content-center">
+              <div class="p-4">
+                <a href="http://facebook.com">
+                  <i class="lab la-facebook"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://twitter.com">
+                  <i class="lab la-twitter"></i>
+                </a>
+              </div>
+              <div class="p-4">
+                <a href="http://linkedin.com">
+                  <i class="lab la-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Blogposts -->
+<section id="blog" class="text-center bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="info-header mb-5">
+          <h1 class="text-primary mt-5 pb-3">RECENT BLOGPOSTS</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <!-- 1st card -->
+        <div class="col-lg-3 col-md-6 col-sm mr-1 my-5">
+          <div class="d-flex justify-content-center">
+            <div class="col">
+              <div class="card" style="width: 18rem">
+                <img
+                  src="https://source.unsplash.com/random/300x200"
+                  class="card-img-bottom"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end 1st card -->
+        <div class="col-lg-3 col-md-6 col-sm my-5">
+          <div class="d-flex justify-content-center">
+            <div class="col">
+              <div class="card" style="width: 18rem">
+                <img
+                  src="https://source.unsplash.com/random/300x200"
+                  class="card-img-bottom"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm my-5">
+          <div class="d-flex justify-content-center">
+            <div class="col">
+              <div class="card" style="width: 18rem">
+                <img
+                  src="https://source.unsplash.com/random/300x200"
+                  class="card-img-bottom"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-sm my-5">
+          <div class="d-flex justify-content-center">
+            <div class="col">
+              <div class="card" style="width: 18rem">
+                <img
+                  src="https://source.unsplash.com/random/300x200"
+                  class="card-img-bottom"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h4 class="card-title">Card title</h4>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- end cards -->
+      </div>
+    </div>
+    <!-- primary container -->
+  </div>
+</section>
+
+{% endblock content %}

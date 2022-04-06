@@ -1,0 +1,132 @@
+body {
+  margin-top: 105px; }
+
+.navbar {
+  box-shadow: 2px 2px 5px #3292a6;
+  opacity: 0.9;
+  background: #fff; }
+  .navbar .nav-item {
+    font-size: 1.4rem;
+    padding-right: 1.4rem; }
+
+#showcase {
+  position: relative;
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
+  min-height: 600px; }
+  #showcase .primary-overlay {
+    background: rgba(50, 146, 166, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px #ddd solid; }
+
+#doctors img {
+  margin-top: -50px; }
+
+#doctors .card:hover {
+  background: #3292a6;
+  color: #fff; }
+
+#doctors .lab {
+  color: #fff; }
+
+@media (max-width: 768px) {
+  #showcase {
+    min-height: 500px; }
+    #showcase h1 {
+      font-size: 4rem; }
+  .mb-resp {
+    margin-bottom: 1rem; } }
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: none !important;
+  transition: all 0.2s ease-out;
+  text-decoration: none; }
+
+section {
+  padding: 2rem 9%; }
+  section:nth-child(even) {
+    background: #f5f5f5; }
+
+.book .row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem; }
+  .book .row .image {
+    flex: 1 1 45rem; }
+    .book .row .image img {
+      width: 100%; }
+  .book .row form {
+    flex: 1 1 45rem;
+    background: #fff;
+    border: var(--border);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem; }
+    .book .row form h3 {
+      color: var(--black);
+      padding-bottom: 1rem;
+      font-size: 3rem; }
+    .book .row form .box {
+      width: 100%;
+      margin: 0.7rem 0;
+      border-radius: 0.5rem;
+      border: var(--border);
+      font-size: 1.6rem;
+      color: var(--black);
+      text-transform: none;
+      padding: 1rem; }
+    .book .row form .btn {
+      padding: 1rem 4rem; }
+
+#tesktit .row {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap; }
+
+.tproduct {
+  background-color: #f9f9f9;
+  border: 1px solid #bcbab8;
+  cursor: pointer;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.01);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  padding: 10 px 12 px; }
+  .tproduct .img {
+    width: 100%;
+    border-radius: 30px; }
+  .tproduct span {
+    color: rgba(71, 189, 248, 0.685); }
+  .tproduct .p-price {
+    padding-top: 3px;
+    color: #124b80;
+    font-size: 15px;
+    font-weight: 700; }
+  .tproduct .buy-button {
+    background-color: #3c9d9b;
+    border-radius: 2;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s ease; }
+
+/*# sourceMappingURL=style.css.map */

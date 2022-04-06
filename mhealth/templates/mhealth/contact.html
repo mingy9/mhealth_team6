@@ -1,0 +1,88 @@
+{% extends "mhealth/base.html" %} {% block content %} {% load static %}
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+  <!-- Display sent successful -->
+  {% if message_name %}
+  <center>
+    <h2>Thanks {{ message_name }}!</h2>
+    <p>We receive your email and will respond shortly.</p>
+  </center>
+  <br />
+  <br />
+  <br />
+  {% else %}
+
+  <!-- end send successful -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-9">
+        <h3>Get In Touch</h3>
+        <p class="lead">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione,
+          temporibus!
+        </p>
+        <!-- Form -->
+        <form action="{% url 'mhealth-contact' %}#contact" method="post">
+          {% csrf_token %}
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="las la-user"></i>
+              </span>
+            </div>
+            <input
+              type="text"
+              name="message-name"
+              class="form-control"
+              placeholder="Name"
+            />
+          </div>
+
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="las la-envelope"></i>
+              </span>
+            </div>
+            <input
+              type="text"
+              name="message-email"
+              class="form-control"
+              placeholder="Email"
+            />
+          </div>
+
+          <div class="input-group input-group-lg mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="las la-pencil-alt"></i>
+              </span>
+            </div>
+            <textarea
+              class="form-control"
+              name="message"
+              placeholder="Message"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <input
+            type="submit"
+            value="Submit"
+            class="btn btn-primary btn-block btn-lg"
+          />
+        </form>
+      </div>
+
+      <div class="col-lg-3 align-self-center">
+        <img
+          src="{% static 'mhealth/img/mlogo.png' %}"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+<!-- contact section end -->
+{% endif %} {% endblock content %}
